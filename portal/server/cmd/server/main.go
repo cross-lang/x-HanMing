@@ -7,9 +7,9 @@ import (
 	"portal/internal/config"
 )
 
-// @title 明河（MingHe）门户系统后端
+// @title 汉明（HanMing）门户系统后端
 // @version 1.0
-// @description 明河（MingHe）门户系统后端的 API 文档
+// @description 汉明（HanMing）门户系统后端的 API 文档
 // @termsOfService http://swagger.io/terms/
 
 // @contact.name API Support

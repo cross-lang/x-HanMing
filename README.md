@@ -1,18 +1,12 @@
-# 明河（MingHe）
-
-> 八月凉风天气晶，
-> 万里无云河汉明，
-> 昏见南楼清且浅，
-> 晓落西山纵复横。
-> —— 宋之问《明河篇》
+# 汉明（HanMing）
 
 ---
 
-`明河（MingHe）`是一套前后端分离的企业级 Web 全栈解决方案，由**明河（MingHe）后台管理系统**和**明河（MingHe）门户系统**两大核心子系统构成，每个子系统均配备独立的前端应用与后端微服务，支持独立部署与横向扩展。
+`汉明（HanMing）`是一套前后端分离的企业级 Web 全栈解决方案，由**汉明（HanMing）后台管理系统**和**汉明（HanMing）门户系统**两大核心子系统构成，每个子系统均配备独立的前端应用与后端微服务，支持独立部署与横向扩展。
 
 ## 项目简介
 
-明河（MingHe）是一套面向企业与园区场景的综合数字化解决方案，为智慧园区管理、企业服务、人才服务平台等业务场景提供端到端的技术支撑。系统采用现代化前后端分离架构，后端基于 Golang + Gin 高性能 Web 框架构建 RESTful API 服务，前端采用 Vue 3 + TypeScript + Element Plus 技术栈打造现代化用户界面，通过 Docker 容器化实现灵活部署，为不同规模的业务场景提供稳定可靠的技术底座。
+汉明（HanMing）是一套面向企业与园区场景的综合数字化解决方案，为智慧园区管理、企业服务、人才服务平台等业务场景提供端到端的技术支撑。系统采用现代化前后端分离架构，后端基于 Golang + Gin 高性能 Web 框架构建 RESTful API 服务，前端采用 Vue 3 + TypeScript + Element Plus 技术栈打造现代化用户界面，通过 Docker 容器化实现灵活部署，为不同规模的业务场景提供稳定可靠的技术底座。
 
 **核心价值：**
 
@@ -49,8 +43,8 @@
 ## 项目结构
 
 ```
-x-MingHe/
-├── admin/                    # 明河后台管理系统
+x-HanMing/
+├── admin/                    # 汉明后台管理系统
 │   ├── server/                      # 后端微服务（Golang + Gin）
 │   │   ├── api/                     # RESTful API 控制器层
 │   │   │   └── v1/                  # API 版本控制
@@ -76,7 +70,7 @@ x-MingHe/
 │       ├── package.json             # NPM 依赖配置
 │       ├── vite.config.ts           # Vite 构建配置
 │       └── tsconfig.json            # TypeScript 配置
-├── portal/                     # 明河门户系统
+├── portal/                     # 汉明门户系统
 │   ├── server/                      # 后端微服务（Golang + Gin）
 │   │   ├── cmd/                     # 命令行接口与应用入口
 │   │   ├── internal/                # 内部模块（非导出）
@@ -188,12 +182,12 @@ graph TB
 
 ```bash
 # 通过 Gitee 克隆项目（国内推荐）
-git clone https://gitee.com/cross-lang/x-MingHe.git
-cd x-MingHe
+git clone https://gitee.com/cross-lang/x-HanMing.git
+cd x-HanMing
 
 # 或通过 GitHub 克隆项目
-git clone https://github.com/cross-lang/x-MingHe.git
-cd x-MingHe
+git clone https://github.com/cross-lang/x-HanMing.git
+cd x-HanMing
 ```
 
 ### 快速部署

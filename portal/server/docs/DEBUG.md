@@ -2,7 +2,7 @@
 
 ## 概述
 
-MingHe 门户系统后端提供了调试模式（Debug Mode），用于开发和测试环境，提供更详细的日志输出、禁用限流、美化 JSON 响应等功能。
+HanMing 门户系统后端提供了调试模式（Debug Mode），用于开发和测试环境，提供更详细的日志输出、禁用限流、美化 JSON 响应等功能。
 
 ## 启用调试模式
 
@@ -204,7 +204,7 @@ make dev
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug MingHe Portal",
+      "name": "Debug HanMing Portal",
       "type": "go",
       "request": "launch",
       "mode": "auto",
@@ -263,10 +263,10 @@ Logger:
 
 ```bash
 # 只查看数据库日志
-grep '"module":"database"' logs/MingHe_portal_*.log
+grep '"module":"database"' logs/HanMing_portal_*.log
 
 # 只查看 API 日志
-grep '"module":"api"' logs/MingHe_portal_*.log
+grep '"module":"api"' logs/HanMing_portal_*.log
 ```
 
 ### 2. 根据 Trace ID 追踪请求

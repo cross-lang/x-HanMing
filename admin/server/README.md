@@ -1,8 +1,8 @@
-# 明河（MingHe）后台管理系统后端
+# 汉明（HanMing）后台管理系统后端
 
 ## 项目简介
 
-`明河（MingHe）后台管理系统后端`是一个基于 [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin) 开源项目开发的现代化后台管理系统后端。采用 Golang + Gin 框架构建，提供高性能、高可用的 RESTful API 服务，适用于企业级管理后台、园区后台管理系统、人才服务平台等多种业务场景。
+`汉明（HanMing）后台管理系统后端`是一个基于 [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin) 开源项目开发的现代化后台管理系统后端。采用 Golang + Gin 框架构建，提供高性能、高可用的 RESTful API 服务，适用于企业级管理后台、园区后台管理系统、人才服务平台等多种业务场景。
 
 **核心价值：**
 - 开箱即用的企业级架构，快速搭建后台管理系统
@@ -234,8 +234,8 @@ graph LR
 ### 项目克隆
 
 ```bash
-git clone https://gitee.com/cross-lang/x-MingHe.git
-cd x-MingHe/admin/server
+git clone https://gitee.com/cross-lang/x-HanMing.git
+cd x-HanMing/admin/server
 ```
 
 ### 依赖安装
@@ -264,7 +264,7 @@ cp config_dev.yaml config.yaml
 mysql:
   path: 127.0.0.1        # 数据库地址
   port: "3306"            # 数据库端口
-  db-name: minghe         # 数据库名称
+  db-name: hanming         # 数据库名称
   username: root          # 数据库用户名
   password: "123456"      # 数据库密码
   config: charset=utf8mb4&parseTime=True&loc=Local
@@ -313,16 +313,16 @@ go run . -c config.yaml
 
 ```bash
 # 构建镜像
-docker build -t minghe-admin-server:latest .
+docker build -t hanming-admin-server:latest .
 
 # 启动容器
 docker run -d \
-  --name minghe-server \
+  --name hanming-server \
   -p 8888:8888 \
   -v $(pwd)/config.yaml:/app/config.yaml \
   -v $(pwd)/resource:/app/resource \
   -v $(pwd)/log:/app/log \
-  minghe-admin-server:latest
+  hanming-admin-server:latest
 
 # 或使用部署脚本（支持多环境）
 ./build.sh dev    # 开发环境

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: minghe
+-- Host: 127.0.0.1    Database: hanming
 -- ------------------------------------------------------
 -- Server version	8.0.45
 
@@ -131,7 +131,7 @@ CREATE TABLE `x_user_identity_verification` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping routines for database 'minghe'
+-- Dumping routines for database 'hanming'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

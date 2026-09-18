@@ -20,7 +20,7 @@ func SerConfigPath(configFilePath string) {
 
 type Config struct {
 	ServerPort             int             `yaml:"ServerPort"`
-	Debug                  bool            `yaml:"Debug"`                    // 调试模式
+	Debug                  bool            `yaml:"Debug"` // 调试模式
 	Mysql                  MysqlConfig     `yaml:"Mysql"`
 	Redis                  RedisConfig     `yaml:"Redis"`
 	Logger                 LoggerConfig    `yaml:"Logger"`
@@ -144,12 +144,12 @@ func (c *Config) ApplyDefaults() {
 		c.LoginJwt.Expires = 24 * time.Hour
 	}
 	if c.LoginJwt.Issuer == "" {
-		c.LoginJwt.Issuer = "minghe-portal"
+		c.LoginJwt.Issuer = "hanming-portal"
 	}
 
 	// 确保数据加密密钥长度
 	if len(c.DataEncryptKey) < 16 {
-		c.DataEncryptKey = "minghe-default-encryption-key-32"
+		c.DataEncryptKey = "hanming-default-encryption-key-32"
 	}
 }
 
@@ -306,12 +306,12 @@ func (c *Config) validateJwtConfig() error {
 func (c *Config) validateLoggerConfig() error {
 	// 验证日志级别
 	validLevels := map[string]bool{
-		"debug":  true,
-		"info":   true,
-		"warn":   true,
-		"error":  true,
-		"panic":  true,
-		"fatal":  true,
+		"debug": true,
+		"info":  true,
+		"warn":  true,
+		"error": true,
+		"panic": true,
+		"fatal": true,
 	}
 	if !validLevels[strings.ToLower(c.Logger.Level)] {
 		return fmt.Errorf("日志级别必须是 debug、info、warn、error、panic 或 fatal 之一")

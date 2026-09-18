@@ -8,15 +8,14 @@ import (
 	"portal/internal/config"
 )
 
-// TestApplyDefaults 测试默认值应用
-func TestApplyDefaults(t *testing.T) {
+// TestApplyDefaults 测试默认值应�?func TestApplyDefaults(t *testing.T) {
 	tests := []struct {
 		name     string
 		config   config.Config
 		expected config.Config
 	}{
 		{
-			name:   "空配置应用默认值",
+			name:   "空配置应用默认�?,
 			config: config.Config{},
 			expected: config.Config{
 				ServerPort: 8088,
@@ -42,13 +41,13 @@ func TestApplyDefaults(t *testing.T) {
 				},
 				LoginJwt: config.LoginJwt{
 					Expires: 24 * time.Hour,
-					Issuer:  "minghe-portal",
+					Issuer:  "hanming-portal",
 				},
-				DataEncryptKey: "minghe-default-encryption-key-32",
+				DataEncryptKey: "hanming-default-encryption-key-32",
 			},
 		},
 		{
-			name: "部分配置值不应用默认值",
+			name: "部分配置值不应用默认�?,
 			config: config.Config{
 				ServerPort: 9000,
 				Mysql: config.MysqlConfig{
@@ -83,9 +82,9 @@ func TestApplyDefaults(t *testing.T) {
 				},
 				LoginJwt: config.LoginJwt{
 					Expires: 24 * time.Hour,
-					Issuer:  "minghe-portal",
+					Issuer:  "hanming-portal",
 				},
-				DataEncryptKey: "minghe-default-encryption-key-32",
+				DataEncryptKey: "hanming-default-encryption-key-32",
 			},
 		},
 	}
@@ -147,7 +146,7 @@ func TestValidateMysqlDSN(t *testing.T) {
 		wantErr bool
 	}{
 		{"有效DSN", "user:pass@tcp(localhost:3306)/db", false},
-		{"有效DSN带参数", "user:pass@tcp(127.0.0.1:3306)/db?charset=utf8mb4", false},
+		{"有效DSN带参�?, "user:pass@tcp(127.0.0.1:3306)/db?charset=utf8mb4", false},
 		{"缺少@", "user:passtcp(localhost:3306)/db", true},
 		{"缺少主机地址", "user:pass@/db", true},
 		{"空DSN", "", true},
@@ -204,8 +203,7 @@ func TestValidateLogLevel(t *testing.T) {
 		{"warn级别", "warn", false},
 		{"error级别", "error", false},
 		{"无效级别", "invalid", true},
-		{"空级别", "", false}, // 会应用默认值
-	}
+		{"空级�?, "", false}, // 会应用默认�?	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -233,8 +231,7 @@ func TestValidateRedisMode(t *testing.T) {
 		{"cluster模式", "cluster", false},
 		{"sentinel模式", "sentinel", false},
 		{"无效模式", "invalid", true},
-		{"空模式", "", false}, // 会应用默认值
-	}
+		{"空模�?, "", false}, // 会应用默认�?	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -285,8 +282,7 @@ func createValidConfig(t *testing.T) config.Config {
 	}
 }
 
-// TestValidateLogDirWritable 测试日志目录可写性验证
-func TestValidateLogDirWritable(t *testing.T) {
+// TestValidateLogDirWritable 测试日志目录可写性验�?func TestValidateLogDirWritable(t *testing.T) {
 	// 创建临时目录
 	tempDir := t.TempDir()
 
@@ -309,8 +305,7 @@ func TestValidateLogDirWritable(t *testing.T) {
 	}
 }
 
-// TestValidateTencentSmsConfig 测试腾讯云短信配置验证
-func TestValidateTencentSmsConfig(t *testing.T) {
+// TestValidateTencentSmsConfig 测试腾讯云短信配置验�?func TestValidateTencentSmsConfig(t *testing.T) {
 	tests := []struct {
 		name    string
 		isOpen  bool
@@ -325,7 +320,7 @@ func TestValidateTencentSmsConfig(t *testing.T) {
 			cloud:  config.TencentCloud{},
 		},
 		{
-			name:   "开启短信服务-完整配置",
+			name:   "开启短信服�?完整配置",
 			isOpen: true,
 			config: config.TencentSms{
 				TemplateId: "123456",
@@ -337,7 +332,7 @@ func TestValidateTencentSmsConfig(t *testing.T) {
 			},
 		},
 		{
-			name:   "开启短信服务-缺少模板ID",
+			name:   "开启短信服�?缺少模板ID",
 			isOpen: true,
 			config: config.TencentSms{
 				SignName: "test",
@@ -349,7 +344,7 @@ func TestValidateTencentSmsConfig(t *testing.T) {
 			wantErr: true,
 		},
 		{
-			name:   "开启短信服务-缺少签名",
+			name:   "开启短信服�?缺少签名",
 			isOpen: true,
 			config: config.TencentSms{
 				TemplateId: "123456",
@@ -361,7 +356,7 @@ func TestValidateTencentSmsConfig(t *testing.T) {
 			wantErr: true,
 		},
 		{
-			name:   "开启短信服务-缺少密钥",
+			name:   "开启短信服�?缺少密钥",
 			isOpen: true,
 			config: config.TencentSms{
 				TemplateId: "123456",
@@ -395,9 +390,9 @@ func TestValidateRateLimitConfig(t *testing.T) {
 		wantErr bool
 	}{
 		{"有效配置", config.RateLimitConfig{Rate: 100, Burst: 200, Period: time.Minute}, false},
-		{"速率为0", config.RateLimitConfig{Rate: 0, Burst: 200, Period: time.Minute}, true},
+		{"速率�?", config.RateLimitConfig{Rate: 0, Burst: 200, Period: time.Minute}, true},
 		{"突发值为0", config.RateLimitConfig{Rate: 100, Burst: 0, Period: time.Minute}, true},
-		{"周期为0", config.RateLimitConfig{Rate: 100, Burst: 200, Period: 0}, true},
+		{"周期�?", config.RateLimitConfig{Rate: 100, Burst: 200, Period: 0}, true},
 		{"突发值小于速率", config.RateLimitConfig{Rate: 200, Burst: 100, Period: time.Minute}, true},
 		{"周期超过1小时", config.RateLimitConfig{Rate: 100, Burst: 200, Period: 2 * time.Hour}, true},
 	}
@@ -447,7 +442,7 @@ GlobalRateLimit:
   Rate: 100
   Burst: 200
   Period: 1m
-DataEncryptKey: minghe-default-encryption-key-32
+DataEncryptKey: hanming-default-encryption-key-32
 TencentSms:
   IsOpen: false
 TencentCloud:

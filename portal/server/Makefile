@@ -128,19 +128,19 @@ mod-update:
 # 构建 Docker 镜像
 docker:
 	@echo "构建 Docker 镜像..."
-	@docker build -t minghe-portal:latest .
-	@echo "Docker 镜像构建完成: minghe-portal:latest"
+	@docker build -t hanming-portal:latest .
+	@echo "Docker 镜像构建完成: hanming-portal:latest"
 
 # 运行 Docker 容器
 docker-run:
 	@echo "运行 Docker 容器..."
-	@docker run -p 8088:8088 --name minghe-portal minghe-portal:latest
+	@docker run -p 8088:8088 --name hanming-portal hanming-portal:latest
 
 # 停止 Docker 容器
 docker-stop:
 	@echo "停止 Docker 容器..."
-	@docker stop minghe-portal || true
-	@docker rm minghe-portal || true
+	@docker stop hanming-portal || true
+	@docker rm hanming-portal || true
 
 # 重启 Docker 容器
 docker-restart: docker-stop docker-run
@@ -156,7 +156,7 @@ clean:
 # 清理所有（包括 Docker）
 clean-all: clean docker-stop
 	@echo "清理所有文件..."
-	@docker rmi minghe-portal:latest || true
+	@docker rmi hanming-portal:latest || true
 	@echo "全部清理完成"
 
 # 完整构建流程（wire -> swagger -> build）

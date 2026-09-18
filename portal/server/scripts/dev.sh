@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# MingHe Portal 开发启动脚本
+# HanMing Portal 开发启动脚本
 
 set -e
 
@@ -89,7 +89,7 @@ start_dev() {
 
 # 主流程
 main() {
-    print_info "MingHe Portal 开发环境启动"
+    print_info "HanMing Portal 开发环境启动"
     echo ""
 
     # 检查环境

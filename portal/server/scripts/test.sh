@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# MingHe Portal 测试脚本
+# HanMing Portal 测试脚本
 
 set -e
 
@@ -40,9 +40,8 @@ run_tests() {
     fi
 }
 
-# 运行短测试
-run_short_tests() {
-    print_step "运行短模式测试..."
+# 运行短测�?run_short_tests() {
+    print_step "运行短模式测�?.."
     if go test -v -short -count=1 ./...; then
         print_info "测试通过"
         return 0
@@ -55,7 +54,7 @@ run_short_tests() {
 # 运行特定包的测试
 run_package_tests() {
     local package=$1
-    print_step "运行包测试: $package"
+    print_step "运行包测�? $package"
     if go test -v -count=1 "./$package"; then
         print_info "测试通过"
         return 0
@@ -71,18 +70,17 @@ show_help() {
     echo ""
     echo "选项:"
     echo "  -h, --help      显示帮助信息"
-    echo "  -s, --short     运行短模式测试"
+    echo "  -s, --short     运行短模式测�?
     echo "  -p, --package   运行指定包的测试"
     echo "  -v, --verbose   详细输出"
     echo ""
     echo "示例:"
-    echo "  $0              # 运行所有测试"
-    echo "  $0 -s           # 运行短模式测试"
+    echo "  $0              # 运行所有测�?
+    echo "  $0 -s           # 运行短模式测�?
     echo "  $0 -p internal/pkg/log  # 运行特定包的测试"
 }
 
-# 主流程
-main() {
+# 主流�?main() {
     local short_mode=false
     local specific_package=""
     local verbose=false
@@ -114,7 +112,7 @@ main() {
         esac
     done
 
-    print_info "MingHe Portal 测试套件"
+    print_info "HanMing Portal 测试套件"
     echo ""
 
     # 运行测试
@@ -130,14 +128,13 @@ main() {
 
     if [ $exit_code -eq 0 ]; then
         echo ""
-        print_info "所有测试完成"
+        print_info "所有测试完�?
     else
         echo ""
-        print_error "测试失败，请检查错误信息"
+        print_error "测试失败，请检查错误信�?
     fi
 
     exit $exit_code
 }
 
-# 执行主流程
-main "$@"
+# 执行主流�?main "$@"

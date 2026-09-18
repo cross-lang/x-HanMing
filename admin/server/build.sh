@@ -1,7 +1,7 @@
 #!/bin/bash
 
-APP_NAME="MingHe_admin_server"
-IMAGE_NAME="MingHe_admin_server:latest"
+APP_NAME="HanMing_admin_server"
+IMAGE_NAME="HanMing_admin_server:latest"
 
 ENV=$1
 
@@ -34,17 +34,17 @@ docker rm ${APP_NAME} 2>/dev/null
 case "$ENV" in
   dev)
     echo "🚀 启动 DEV 环境"
-    docker run -d --name ${APP_NAME} -v ./log:/MingHe/admin_server/log -v ./excels:/MingHe/admin_server/excels -v ./config_dev.yaml:/MingHe/admin_server/config.yaml -p 8888:8888 ${IMAGE_NAME}
+    docker run -d --name ${APP_NAME} -v ./log:/HanMing/admin_server/log -v ./excels:/HanMing/admin_server/excels -v ./config_dev.yaml:/HanMing/admin_server/config.yaml -p 8888:8888 ${IMAGE_NAME}
     ;;
 
   test)
     echo "🚀 启动 TEST 环境"
-    docker run -d --name ${APP_NAME} -v ./log:/MingHe/admin_server/log -v ./config_test.yaml:/MingHe/admin_server/config.yaml -p 8888:8888 ${IMAGE_NAME}
+    docker run -d --name ${APP_NAME} -v ./log:/HanMing/admin_server/log -v ./config_test.yaml:/HanMing/admin_server/config.yaml -p 8888:8888 ${IMAGE_NAME}
     ;;
 
   prod)
     echo "🚀 启动 PROD 环境"
-    docker run -d --name ${APP_NAME} -v ./log:/MingHe/admin_server/log -v ./config_prod.yaml:/MingHe/admin_server/config.yaml -p 8888:8888 ${IMAGE_NAME}
+    docker run -d --name ${APP_NAME} -v ./log:/HanMing/admin_server/log -v ./config_prod.yaml:/HanMing/admin_server/config.yaml -p 8888:8888 ${IMAGE_NAME}
     ;;
 
   *)

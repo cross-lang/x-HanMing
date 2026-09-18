@@ -1,8 +1,8 @@
-# 明河（MingHe）门户系统后端
+# 汉明（HanMing）门户系统后端
 
 ## 项目简介
 
-`明河（MingHe）门户系统后端`是一个基于 Go 语言开发的生产级门户系统后端，提供用户注册、登录、实名认证、企业管理、用户注销等核心功能。系统采用分层架构设计，支持多环境部署，适用于智慧园区、企业服务、校园管理等场景。
+`汉明（HanMing）门户系统后端`是一个基于 Go 语言开发的生产级门户系统后端，提供用户注册、登录、实名认证、企业管理、用户注销等核心功能。系统采用分层架构设计，支持多环境部署，适用于智慧园区、企业服务、校园管理等场景。
 
 ## 核心特征
 
@@ -273,8 +273,8 @@ graph LR
 ### 项目克隆
 
 ```bash
-git clone https://gitee.com/cross-lang/x-MingHe.git
-cd x-MingHe/portal/server
+git clone https://gitee.com/cross-lang/x-HanMing.git
+cd x-HanMing/portal/server
 ```
 
 ### 依赖安装
@@ -316,7 +316,7 @@ cp config_prod.yaml config.yaml
 | 配置项 | 说明 | 示例 |
 |--------|------|------|
 | ServerPort | 服务监听端口 | 8088 |
-| Mysql.Dsn | MySQL 数据库连接字符串 | root:123456@tcp(127.0.0.1:3306)/minghe?charset=utf8mb4&parseTime=True&loc=Local |
+| Mysql.Dsn | MySQL 数据库连接字符串 | root:123456@tcp(127.0.0.1:3306)/hanming?charset=utf8mb4&parseTime=True&loc=Local |
 | Redis.Addr | Redis 连接地址 | 127.0.0.1:6379 |
 | Logger.LogDir | 日志输出目录 | log |
 | Logger.Level | 日志级别 | debug/info/warn/error |
@@ -513,11 +513,11 @@ git add . && git commit -m "fix: 解决了一些已知问题" && (git pull && gi
 ```yaml
 TencentCloud:
   COS:
-    Bucket: "minghe-resource-1341474513"
+    Bucket: "hanming-resource-1341474513"
     Region: "ap-wuhan"
     AppID: "1341474513"
     Prefix: "upload"
-    BaseUrl: "https://minghe-resource.minghe.com"
+    BaseUrl: "https://hanming-resource.hanming.com"
 ```
 
 ## 许可证

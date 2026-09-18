@@ -290,7 +290,7 @@ GlobalRateLimit:
 LoginJwt:
   Key: "testkey"
   Expires: 2160h
-  Issuer: "minghe"
+  Issuer: "hanming"
 DataEncryptKey: "test-key"
 TencentSms:
   TemplateId: "123456"

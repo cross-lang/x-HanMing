@@ -1,10 +1,10 @@
-# MingHe
+# HanMing
 
-`MingHe` is an enterprise-grade full-stack web solution with frontend-backend separation, consisting of two core subsystems: the **MingHe Admin System** and the **MingHe User System**. Each subsystem is equipped with independent frontend applications and backend microservices, supporting independent deployment and horizontal scaling.
+`HanMing` is an enterprise-grade full-stack web solution with frontend-backend separation, consisting of two core subsystems: the **HanMing Admin System** and the **HanMing User System**. Each subsystem is equipped with independent frontend applications and backend microservices, supporting independent deployment and horizontal scaling.
 
 ## Project Overview
 
-MingHe is a comprehensive digital solution designed for enterprises and industrial park scenarios, providing end-to-end technical support for minghe management, enterprise services, talent service platforms, and other business scenarios. The system adopts a modern frontend-backend separation architecture, with the backend built on Golang + Gin high-performance web framework to provide RESTful API services, and the frontend built on Vue 3 + TypeScript + Element Plus technology stack to deliver modern user interfaces. Through Docker containerization, it enables flexible deployment and provides a stable and reliable technical foundation for business scenarios of varying scales.
+HanMing is a comprehensive digital solution designed for enterprises and industrial park scenarios, providing end-to-end technical support for hanming management, enterprise services, talent service platforms, and other business scenarios. The system adopts a modern frontend-backend separation architecture, with the backend built on Golang + Gin high-performance web framework to provide RESTful API services, and the frontend built on Vue 3 + TypeScript + Element Plus technology stack to deliver modern user interfaces. Through Docker containerization, it enables flexible deployment and provides a stable and reliable technical foundation for business scenarios of varying scales.
 
 **Core Value:**
 
@@ -17,7 +17,7 @@ MingHe is a comprehensive digital solution designed for enterprises and industri
 
 **Use Cases:**
 
-- minghe Comprehensive Management System
+- hanming Comprehensive Management System
 - Enterprise Service Platform and SaaS Applications
 - Talent Service and Recruitment Management System
 - Campus Management and Digital Education Platform
@@ -41,8 +41,8 @@ MingHe is a comprehensive digital solution designed for enterprises and industri
 ## Project Structure
 
 ```
-x-MingHe/
-├── admin/                    # MingHe Admin System
+x-HanMing/
+├── admin/                    # HanMing Admin System
 │   ├── server/                      # Backend Microservice (Golang + Gin)
 │   │   ├── api/                     # RESTful API Controller Layer
 │   │   │   └── v1/                  # API Version Control
@@ -68,7 +68,7 @@ x-MingHe/
 │       ├── package.json             # NPM Dependency Configuration
 │       ├── vite.config.ts           # Vite Build Configuration
 │       └── tsconfig.json            # TypeScript Configuration
-├── portal/                     # MingHe User System
+├── portal/                     # HanMing User System
 │   ├── server/                      # Backend Microservice (Golang + Gin)
 │   │   ├── cmd/                     # Command Line Interface & Application Entry
 │   │   ├── internal/                # Internal Modules (Non-exported)
@@ -180,12 +180,12 @@ graph TB
 
 ```bash
 # Clone project via Gitee (recommended for China)
-git clone https://gitee.com/cross-lang/x-MingHe.git
-cd x-MingHe
+git clone https://gitee.com/cross-lang/x-HanMing.git
+cd x-HanMing
 
 # Or clone project via GitHub
-git clone https://github.com/cross-lang/x-MingHe.git
-cd x-MingHe
+git clone https://github.com/cross-lang/x-HanMing.git
+cd x-HanMing
 ```
 
 ### Quick Deployment

@@ -2,7 +2,7 @@
 FROM golang:1.25.0-alpine AS builder
 
 LABEL authors="yeyushilai"
-LABEL maintainer="minghe-portal"
+LABEL maintainer="hanming-portal"
 LABEL version="1.0.0"
 
 ARG BUILD_ENV=production
@@ -46,7 +46,7 @@ RUN if [ "$BUILD_ENV" = "production" ]; then \
 FROM alpine:3.18
 
 LABEL authors="yeyushilai"
-LABEL maintainer="minghe-portal"
+LABEL maintainer="hanming-portal"
 
 # 设置时区
 ENV TZ=Asia/Shanghai

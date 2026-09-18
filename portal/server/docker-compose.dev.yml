@@ -1,16 +1,15 @@
 version: '3.8'
 
 services:
-  # MySQL 数据库
-  mysql:
+  # MySQL 数据�?  mysql:
     image: mysql:8.0
-    container_name: minghe-mysql-dev
+    container_name: hanming-mysql-dev
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root123456
-      MYSQL_DATABASE: minghe_portal_dev
-      MYSQL_USER: minghe
-      MYSQL_PASSWORD: minghe123456
+      MYSQL_DATABASE: hanming_portal_dev
+      MYSQL_USER: hanming
+      MYSQL_PASSWORD: hanming123456
       TZ: Asia/Shanghai
     ports:
       - "3307:3306"
@@ -24,7 +23,7 @@ services:
       - --general-log=1
       - --general-log-file=/var/log/mysql/general.log
     networks:
-      - minghe-dev-network
+      - hanming-dev-network
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot123456"]
       interval: 10s
@@ -34,7 +33,7 @@ services:
   # Redis 缓存
   redis:
     image: redis:7-alpine
-    container_name: minghe-redis-dev
+    container_name: hanming-redis-dev
     restart: unless-stopped
     ports:
       - "6380:6379"
@@ -42,20 +41,20 @@ services:
       - redis-dev-data:/data
     command: redis-server --appendonly yes --requirepass redis123456 --loglevel debug
     networks:
-      - minghe-dev-network
+      - hanming-dev-network
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 3s
       retries: 5
 
-  # MingHe Portal 应用
+  # HanMing Portal 应用
   app:
     build:
       context: .
       dockerfile: Dockerfile.dev
       target: builder
-    container_name: minghe-portal-dev
+    container_name: hanming-portal-dev
     restart: unless-stopped
     ports:
       - "8088:8088"
@@ -73,7 +72,7 @@ services:
       redis:
         condition: service_healthy
     networks:
-      - minghe-dev-network
+      - hanming-dev-network
     command: go run ./cmd/server -c config_local.yaml
 
 volumes:
@@ -83,5 +82,5 @@ volumes:
     driver: local
 
 networks:
-  minghe-dev-network:
+  hanming-dev-network:
     driver: bridge

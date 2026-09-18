@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# MingHe Portal 测试覆盖率脚本
+# HanMing Portal 测试覆盖率脚本
 
 set -e
 
@@ -181,7 +181,7 @@ main() {
         esac
     done
 
-    print_info "MingHe Portal 测试覆盖率分析"
+    print_info "HanMing Portal 测试覆盖率分析"
     echo ""
 
     # 生成覆盖率报告

@@ -87,8 +87,8 @@ func InitLogger(conf config.LoggerConfig) {
 		log.Printf("创建日志目录失败: %v", err)
 	}
 
-	// 项目日志文件名: MingHe_portal_<年月日时分秒毫秒>.log
-	projectLogFile := "logs/MingHe_portal_" + time.Now().Format("20060102150405.000") + ".log"
+	// 项目日志文件名: HanMing_portal_<年月日时分秒毫秒>.log
+	projectLogFile := "logs/HanMing_portal_" + time.Now().Format("20060102150405.000") + ".log"
 	lumberjackLogger := &lumberjack.Logger{
 		Filename:   projectLogFile,
 		MaxSize:    100, // MB
@@ -128,8 +128,8 @@ func InitLogger(conf config.LoggerConfig) {
 
 // InitCronLogger 初始化定时任务日志器
 func initCronLogger(conf config.LoggerConfig) {
-	// 定时任务日志文件名: MingHe_portal_cron_<年月日时分秒毫秒>.log
-	cronLogFile := "logs/MingHe_portal_cron_" + time.Now().Format("20060102150405.000") + ".log"
+	// 定时任务日志文件名: HanMing_portal_cron_<年月日时分秒毫秒>.log
+	cronLogFile := "logs/HanMing_portal_cron_" + time.Now().Format("20060102150405.000") + ".log"
 	lumberjackLogger := &lumberjack.Logger{
 		Filename:   cronLogFile,
 		MaxSize:    100, // MB
