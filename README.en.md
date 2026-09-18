@@ -4,18 +4,9 @@
 
 HanMing is a frontend-backend separated enterprise full-stack digital solution for enterprises and industrial park scenarios, comprising two core subsystems: the Admin System and the User System. It provides end-to-end technical support for smart park management, enterprise services, talent platforms, and more. The backend is built on Golang + Gin for high-performance RESTful API services, while the frontend leverages Vue 3 + TypeScript + Element Plus for modern user interfaces, supporting independent deployment and Docker containerization.
 
-**Core Value:**
-
-- **Full-Stack Solution**: Provides complete frontend and backend code assets, covering full-link capabilities including user interaction, business logic, and data persistence, significantly reducing the R&D threshold for enterprise-grade applications
-- **High-Performance Microservices Architecture**: Backend built with Gin framework delivers RESTful API services supporting high concurrency and low latency, combined with Redis caching and database optimization to ensure system performance in complex business scenarios
-- **Modern Frontend Engineering**: Responsive user interfaces built on Vue 3 + TypeScript, integrated with Element Plus enterprise-grade UI component library, delivering smooth user experience and rich interaction capabilities
-- **Refined Permission Control**: RBAC (Role-Based Access Control) implemented based on Casbin, complemented by a comprehensive audit logging system, meeting enterprise-level security and compliance requirements
-- **Multi-Cloud Storage Adaptation**: Supports local storage and mainstream object storage services including Tencent COS, Aliyun OSS, MinIO, Huawei OBS, AWS S3, flexibly adapting to different infrastructure environments
-- **Open API Ecosystem**: Integrates Swagger to automatically generate interactive API documentation, provides OpenAPI specification support, facilitating frontend development integration and third-party system integration
-
 **Use Cases:**
 
-- hanming Comprehensive Management System
+- Smart Park Comprehensive Management System
 - Enterprise Service Platform and SaaS Applications
 - Talent Service and Recruitment Management System
 - Campus Management and Digital Education Platform
@@ -23,7 +14,9 @@ HanMing is a frontend-backend separated enterprise full-stack digital solution f
 
 ## Key Features
 
+- **Full-Stack Solution**: Provides complete frontend and backend code assets, covering full-link capabilities including user interaction, business logic, and data persistence, significantly reducing the R&D threshold for enterprise-grade applications
 - **High-Performance Service Architecture**: RESTful API services built on Gin framework, supporting optimization mechanisms such as HTTP/2, connection pool reuse, middleware chaining, confidently handling high-concurrency access scenarios
+- **Modern Frontend Engineering**: Responsive user interfaces built on Vue 3 + TypeScript + Element Plus, delivering smooth user experience and rich interaction capabilities
 - **Dual-System Independent Deployment**: Management system and user system are physically isolated, supporting independent scaling, canary releases, and fault isolation, ensuring high availability of core business
 - **Multi-Database Compatibility**: Supports mainstream databases including MySQL, PostgreSQL, SQL Server, Oracle, MongoDB, SQLite, implementing unified data access layer through GORM ORM framework, reducing database migration costs
 - **Elastic Storage Solutions**: Provides seamless switching capability between local file system storage and multi-cloud object storage, supports dynamic configuration of storage strategies, meeting storage requirements for different scale businesses
