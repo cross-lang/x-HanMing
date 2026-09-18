@@ -1,10 +1,8 @@
 # HanMing
 
-`HanMing` is an enterprise-grade full-stack web solution with frontend-backend separation, consisting of two core subsystems: the **HanMing Admin System** and the **HanMing User System**. Each subsystem is equipped with independent frontend applications and backend microservices, supporting independent deployment and horizontal scaling.
-
 ## Project Overview
 
-HanMing is a comprehensive digital solution designed for enterprises and industrial park scenarios, providing end-to-end technical support for hanming management, enterprise services, talent service platforms, and other business scenarios. The system adopts a modern frontend-backend separation architecture, with the backend built on Golang + Gin high-performance web framework to provide RESTful API services, and the frontend built on Vue 3 + TypeScript + Element Plus technology stack to deliver modern user interfaces. Through Docker containerization, it enables flexible deployment and provides a stable and reliable technical foundation for business scenarios of varying scales.
+HanMing is a frontend-backend separated enterprise full-stack digital solution for enterprises and industrial park scenarios, comprising two core subsystems: the Admin System and the User System. It provides end-to-end technical support for smart park management, enterprise services, talent platforms, and more. The backend is built on Golang + Gin for high-performance RESTful API services, while the frontend leverages Vue 3 + TypeScript + Element Plus for modern user interfaces, supporting independent deployment and Docker containerization.
 
 **Core Value:**
 
