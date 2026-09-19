@@ -273,7 +273,7 @@ graph LR
 ### 项目克隆
 
 ```bash
-git clone https://gitee.com/cross-lang/x-HanMing.git
+git clone https://github.com/cross-lang/x-HanMing.git
 cd x-HanMing/portal/server
 ```
 

@@ -172,11 +172,6 @@ graph TB
 ### Clone Project
 
 ```bash
-# Clone project via Gitee (recommended for China)
-git clone https://gitee.com/cross-lang/x-HanMing.git
-cd x-HanMing
-
-# Or clone project via GitHub
 git clone https://github.com/cross-lang/x-HanMing.git
 cd x-HanMing
 ```

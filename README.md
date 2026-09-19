@@ -172,11 +172,6 @@ graph TB
 ### 项目克隆
 
 ```bash
-# 通过 Gitee 克隆项目（国内推荐）
-git clone https://gitee.com/cross-lang/x-HanMing.git
-cd x-HanMing
-
-# 或通过 GitHub 克隆项目
 git clone https://github.com/cross-lang/x-HanMing.git
 cd x-HanMing
 ```
