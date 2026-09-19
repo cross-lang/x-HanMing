@@ -4,20 +4,13 @@
 
 `汉明（HanMing）后台管理系统后端`是一个基于 [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin) 开源项目开发的现代化后台管理系统后端。采用 Golang + Gin 框架构建，提供高性能、高可用的 RESTful API 服务，适用于企业级管理后台、园区后台管理系统、人才服务平台等多种业务场景。
 
-**核心价值：**
-- 开箱即用的企业级架构，快速搭建后台管理系统
-- 基于 Gin 的高性能 Web 框架，支持高并发场景
-- 完善的权限控制（RBAC）和审计日志
-- 支持多种数据库（MySQL、PostgreSQL、SQL Server、Oracle、MongoDB 等）
-- 内置对象存储支持（腾讯云 COS、阿里云 OSS、MinIO 等）
-- 完整的 API 文档自动生成（Swagger）
-
 ## 核心特征
 
+- **开箱即用**：企业级架构，快速搭建后台管理系统，适用于园区管理、人才服务等多种业务场景
 - **高性能架构**：基于 Gin 框架，支持高并发场景
 - **多数据库支持**：MySQL、PostgreSQL、SQL Server、Oracle、MongoDB、SQLite
 - **灵活的存储方案**：本地存储、腾讯云 COS、阿里云 OSS、MinIO、华为云 OBS、AWS S3
-- **完善的权限体系**：基于 Casbin 的 RBAC 权限控制
+- **完善的权限体系**：基于 Casbin 的 RBAC 权限控制，支持审计日志
 - **API 文档自动化**：集成 Swagger，自动生成交互式 API 文档
 - **代码生成器**：支持快速生成 CRUD 代码
 - **插件化设计**：支持自定义插件扩展业务功能
