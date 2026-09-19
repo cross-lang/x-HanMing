@@ -22000,7 +22000,7 @@
     ],
     "info": {
         "_postman_id": "91bba598-8ded-4884-9ffe-f16bca62e8db",
-        "name": "汉明（HanMing）后台管理",
+        "name": "汉明（HanMing）后台",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
             "content": "一个基于 [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin) 开源项目开发的现代化后台管理系统后端",
